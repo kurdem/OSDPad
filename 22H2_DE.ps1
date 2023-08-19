@@ -3,10 +3,6 @@
 #   Start-OSDCloud with Params
 #================================================
 
-# Download cmtrace.exe
-#Write-Host -ForegroundColor Gray "Download cmtrace.exe from GitHub Repo"
-#Invoke-WebRequest https://github.com/kurdem/OSDPad/cmtrace.exe -OutFile "C:\OSDCloud\cmtrace.exe"
-
 $Params = @{
     OSBuild = "22H2"
     OSVersion = "Windows 10"
@@ -19,6 +15,9 @@ $Params = @{
 }
 Start-OSDCloud @Params
 
+# Download cmtrace.exe
+Write-Host -ForegroundColor Gray "Download cmtrace.exe from GitHub Repo"
+Invoke-WebRequest https://github.com/kurdem/OSDPad/cmtrace.exe -OutFile "C:\OSDCloud\cmtrace.exe"
 #================================================
 #  [PostOS] OOBEDeploy Configuration
 #================================================
